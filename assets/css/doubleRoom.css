@@ -1,0 +1,335 @@
+:root{
+    --primary-color:118, 90, 80;
+    --secundary-color:32, 32, 32;
+    --opacity-primary:0.5;
+    --opacity-secundary:0.8;
+}
+* {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    box-sizing: border-box; 
+    line-height: 1.5;
+    font-size: 18px;
+}
+h1,h2{
+    font-family: 'Merriweather', serif;
+    color: rgb(var(--primary-color));
+}
+p {
+    font-family: 'Lora', serif;
+    color: rgba(var(--secundary-color), var(--opacity-secundary));
+    line-height: 1.5;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+header {
+    font-size: 1rem;
+}
+nav {
+    display: flex;
+}
+.bar-header{
+    background-color: rgb(var(--primary-color));
+    width: 100%;
+    height: 10px;
+}
+
+.header-menu {
+    max-width: 1140px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-menu img {
+    width: 100px;
+    height: 100px;
+}
+.header-menu ul,a {
+    font-family: 'Lora', serif;
+    color: rgb(var(--secundary-color), var(--opacity-secundary));
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+.header-menu a:hover {
+    transform: scale(1.05);
+}
+.header-menu li {
+    list-style: none;
+    padding: 0 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 20px;
+    background-color: rgb(var(--primary-color));
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.header-button a {
+    color: #FFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
+}
+.header-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--secundary-color),0.5);
+    transition: left 0.2s linear;
+    z-index: 0;
+}
+.header-button:hover::before {
+    left: 0;
+}
+.header-button:hover {
+    background-color: rgb(var(--primary-color));
+}
+
+.banner-hotel-doubleroom {
+    position: relative;
+    background-image: url(/assets/img/imagem\ double\ room\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+.banner-hotel-doubleroom::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-name-doubleroom {
+    max-width: 1140px;
+    margin:auto;
+    position: relative;
+    z-index: 2;
+    padding-top: 3rem;
+}
+.banner-name-doubleroom h1 {
+    font-size: 3.5rem;
+    color: #FFFF;
+}
+.banner-name-doubleroom p {
+    font-size: 1rem;
+    color: #FFF;
+}
+.banner-imagens-doubleroom{
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 3rem;
+    gap: 20px;
+}
+.banner-imagens-doubleroom img{
+    width: 170px;
+    height: 170px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9);
+    border-image: initial;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+.banner-imagens-doubleroom img:hover{
+    transform: scale(1.03); 
+    border-color: rgb(var(--primary-color))
+}
+
+#information {   
+    margin: 10px 50px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.information-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.information-title h1 {
+    font-size: 2.5rem;
+    color: rgb(var(--primary-color));
+    margin-top: 2rem;
+}
+.information-title p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+main{
+    overflow: hidden;
+    margin-top: 2rem;
+    background-color: rgba(245, 245, 245, 0.1);
+}
+.container-grid {
+    display: grid;
+    grid-template-areas: 
+        "item1 item4"
+        "item5 item2"
+        "item3 item6";
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de largura igual */
+    grid-template-rows: repeat(3, 50vh); /* 4 linhas, cada uma com 50% da altura da tela */
+}
+.item1{
+    grid-area: item1;
+}.item2{
+    grid-area: item2;
+}.item3{
+    grid-area: item3;
+}.item4{
+    grid-area: item4;
+}.item5{
+    grid-area: item5;
+}.item6{
+    grid-area: item6;
+}
+.information-doubleroom {
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+}
+.information-doubleroom img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    border-radius: 10px; 
+    transition: transform 0.3s cubic-bezier(0.47, 0, 0.75, 0.72), box-shadow 0.3s linear;
+}
+.information-doubleroom img:hover {
+    transform: scale(1.03); 
+}
+
+.information-item{
+    padding: 0 60px 0 60px;
+    text-align: center;
+}
+.information-item-tittle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.information-item-tittle h1{
+    font-size: 2rem;
+}
+.information-item-tittle p{
+    font-size: 1rem;
+}
+.information-item-tittle img{
+    width: 60px;
+    height: 60px;
+}
+
+.banner-doubleroom-booking{
+    position: relative;
+    background-image: url(/assets/img/imagem\ double\ room\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+    display: flex;
+}
+.banner-doubleroom-booking::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.booking-info{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.booking-info h1{
+    z-index: 2;
+    color: #FFF;
+    position: relative;
+    font-size: 2rem;
+}
+.button-booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    transition: all 0.7s;
+    margin-top: 30px;
+    border: 2px solid rgb(var(--primary-color));
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.button-booking a {
+    color: rgb(var(--primary-color));
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+    font-size: 1rem;
+}
+.button-booking::before {
+    content: '';
+    position: relative;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: left 0.2s ease;
+    z-index: 2;
+}
+.button-booking:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+footer{
+    background-color: #202020;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+}
+.footer-info{
+    display: flex;
+    margin: 0 auto;
+    justify-self: center;
+    align-items: center;
+}
+.footer-info p{
+    font-size: 1.5rem;
+    color: #FFF;
+}

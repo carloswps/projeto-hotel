@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Booking</title>
+</head>
+
+<body>
+    <header>
+        <div class="bar-header"></div>
+        <nav class="header-menu">
+            <img class="logo" src="assets/media/Logo hotel (1).png" alt="" loading="lazy">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Rooms</a></li>
+                <li><a href="">Restaurant</a></li>
+                <li><a href="">Contacts</a></li>
+                <button class="button-header"><a href="">Booking</a></button>
+            </ul>
+        </nav>
+    </header>
+    <section class="banner-hotel">
+        <div class="banner-name">
+            <h1>
+                Viajar nunca foi tão aconchegante
+            </h1>
+            <p>
+                Reserve o lugar todo só para você
+            </p>
+        </div>
+    </section>
+    <main>
+        <div class="Container">
+            <div class="Title-booking">
+                <h1>Faça Agora a sua reserva</h1>
+            </div>
+            <div class="form-box">
+                <form action="booking.html" method="get">
+                    <div class="date-label">
+                        <h1>Suas Datas:</h1>
+                        <input id="inputs" type="date" name="Check-in" placeholder="Check-in" required>
+                        <input id="inputs" type="date" name="Check-out" placeholder="Check-out" required>
+                    </div>
+
+                    <div class="accommodations">
+                        <h1>Acomodações:</h1>
+                        <select name="" id="accommodations-rooms">
+                            <option value="" disabled selected>Selecione a sua acomodação</option>
+                            <option value="1">Dooble Room</option>
+                            <option value="2">Single Romm</option>
+                            <option value="3">Family Room</option>
+                        </select>
+                    </div>            
+        
+                    <div class="companions-label">
+                        <h1>Acompanhantes:</h1>
+                        <select name="" id="companions-options">
+                            <option value="" disabled selected>Adultos</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select name="" id="companions-options">
+                            <option value="" disabled selected>Crianças</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <div class="booking-bar"></div>
+                
+                <form action="booking.html" method="get">
+                    <div class="names-label">
+                        <h1>Seu Nome:</h1>
+                        <input id="inputs-names" type="text" name="Nome" placeholder="Digite seu nome" required maxlength="20">
+                        <input id="inputs-names" type="text" name="Sobrenome" placeholder="Digite seu sobrenome" required maxlength="20">
+                    </div>
+
+                    <div class="e-mail-label">
+                        <h1>E-mail:</h1>
+                        <input id="input-email" type="email" name="E-mail" placeholder="E-mail para contato" required maxlength="20">
+                    </div>
+
+                    <div class="phone-label">
+                        <h1>Telefone:</h1>
+                        <input id="input-phone" type="tel" name="E-mail" placeholder="Telefone para contato" required maxlength="20">
+                    </div>
+                    
+                    <div class="textarea">
+                        <h1>Pedidos Especiais</h1>
+                        <textarea name="requests" id="special-requests" placeholder="Digite seus pedidos especiais aqui." maxlength="200"></textarea>
+                        <p>
+                            Pedidos especiais não podem ser garantidos, no entanto faremos o nosso melhor para atender às suas necessidades. 
+                            Você sempre pode fazer um pedido especial após a conclusão da sua reserva.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <P>Projeto criado com o intuito de estudos...</P>
+        </div>
+    </footer>
+</body>
+
+</html>
