@@ -6,4 +6,15 @@ function toggleMenu() {
       sidebar.style.right = "0px";
     }
 }
-  
+
+function mobilemenu (){
+    const menu = document.querySelector('.mobile-menu');
+    if(window.innerWidth < 600) {
+        menu.style.display = 'block';
+    } else {
+      menu.style.display = 'none';
+    }
+}
+
+window.addEventListener('resize', mobilemenu);
+mobilemenu();
