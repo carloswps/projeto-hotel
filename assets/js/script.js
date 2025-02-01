@@ -7,15 +7,15 @@ function toggleMenu() {
     }
 }
 
-function mobilemenu (){
-    const menu = document.querySelector('.mobile-menu');
-    if(window.innerWidth < 600) {
-        menu.style.display = 'block';
-    } else {
-      menu.style.display = 'none';
-    }
+function mobilemenu() {
+  const menu = document.querySelector('.mobile-menu');
+  if (!menu) return; 
+  if (window.innerWidth < 600) {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
 }
-
 window.addEventListener('resize', mobilemenu);
 mobilemenu();
 
