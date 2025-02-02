@@ -93,7 +93,7 @@ nav {
 .sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -60vw;
     width: 60vw;
     height: 60vh;
     background: rgba(var(--secundary-color), 0.9);
@@ -980,15 +980,13 @@ footer{
     .sidebar {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -60vw;
         width: 60vw;
         height: 57vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
     }
     .sidebar a {
         display: flex;
@@ -997,6 +995,16 @@ footer{
         padding: 12px;
         text-decoration: none;
         font-size: 1.4rem;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
     }
     
     .header-menu li{
@@ -1216,23 +1224,31 @@ footer{
     .sidebar {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -60vw;
         width: 60vw;
-        height: 57vh;
+        height: 52vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
     }
     .sidebar a {
         display: flex;
         justify-content: start;
         color: white;
-        padding: 12px;
+        padding: 10px;
         text-decoration: none;
         font-size: 1.4rem;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
     }
     
     .header-menu li{
@@ -1246,7 +1262,7 @@ footer{
         font-size: 1rem;
     }
     .banner-hotel {
-        height: 45vh;
+        height: 40vh;
     }
     .banner-name {
         margin: auto;
@@ -1454,23 +1470,31 @@ footer{
     .sidebar {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -60vw;
         width: 60vw;
-        height: 57vh;
+        height: 47vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
     }
     .sidebar a {
         display: flex;
         justify-content: start;
         color: white;
-        padding: 12px;
+        padding: 5px;
         text-decoration: none;
         font-size: 1.4rem;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
     }
     
     .header-menu li{
@@ -1484,7 +1508,7 @@ footer{
         font-size: 1rem;
     }
     .banner-hotel {
-        height: 45vh;
+        height: 35vh;
     }
     .banner-name {
         margin: auto;
