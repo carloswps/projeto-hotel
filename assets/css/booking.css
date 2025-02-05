@@ -51,14 +51,13 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 100%;
 }
 .header-menu a:hover{
     transform: scale(1.05);
 }
 .header-menu li{
     list-style: none;
-    padding: 0 15px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -116,48 +115,6 @@ nav {
 #booking-mobile{
     color: rgba(var(--primary-color));
 }
-.mobilebutton-menu{
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    background-color: rgb(var(--primary-color));
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 80%;
-    height: 3rem;
-    margin-left: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mobilebutton-menu a{
-    color: #FFFF;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    padding: 0;
-    justify-content: center;
-    z-index: 2;
-}
-.mobilebutton-menu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(var(--secundary-color),0.5);
-    transition: left 0.2s linear;
-    z-index: 0;
-}
-.mobilebutton-menu:hover::before {
-    left: 0;
-}
-.mobilebutton-menu:hover {
-    background-color: rgb(var(--primary-color));
-}
 .close-btn {
     position: absolute;
     top: 10px;
@@ -210,7 +167,7 @@ nav {
     background-image: url(/assets/img/Imagem\ 1.jpg);
     background-position: bottom;
     background-size: cover;
-    height: 40vh;   
+    height: 35vh;   
 }
 .banner-hotel::before{
     content: '';
@@ -229,7 +186,7 @@ nav {
     flex-wrap: wrap;
 }
 .banner-name h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #FFFF;
     font-weight: lighter;
     padding-top: 3rem;
@@ -239,7 +196,7 @@ nav {
 }
 
 main{
-    margin: 10px 50px;
+    margin: 0px 50px;
 }
 
 .Title-booking h1{
@@ -265,7 +222,7 @@ main{
 }
 .form-box #inputs{
     font-size: 1rem;
-    width: 50vw;
+    width: 85vw;
     height: 50px;
     font-family: 'Merriweather', serif;
     border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
@@ -282,7 +239,38 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    gap: 10px;
 }
+.date-label input[type='text']{
+    font-size: 1rem;
+    width: 100%;
+    height: 50px;
+    font-family: 'Merriweather', serif;
+    border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+    border-radius :10px; 
+    padding:0 1rem;
+    color: rgba(var(--primary-color), var(--opacity-secundary));
+    cursor: pointer;
+}
+.date-label input[type='date']{
+    font-size: 1rem;
+    width: 100%;
+    height: 50px;
+    font-family: 'Merriweather', serif;
+    border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+    border-radius :10px; 
+    padding:0 1rem;
+    color: rgba(var(--primary-color), var(--opacity-secundary));
+    cursor: pointer;
+}
+
+.date-label input:focus {
+    outline: none;
+    border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+    box-shadow: 0 0 2px rgba(var(--primary-color), var(--opacity-secundary));
+  }
+
 .accommodations{
     display: flex;
     align-items: center;
@@ -338,7 +326,7 @@ main{
 }   
 #inputs-names{
     font-size: 1rem;
-    width: 50vw;
+    width: 75vw;
     height: 50px;
     font-family: 'Merriweather', serif;
     border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
@@ -356,10 +344,22 @@ main{
     align-items: center;
     justify-content: start;
 }
-#input-email, #input-phone{
+#input-email{
     font-size: 1rem;
     margin-left: -1rem;
-    width: 100%;
+    width: 100vw;
+    height: 50px;
+    font-family: 'Merriweather', serif;
+    border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+    border-radius:10px; 
+    padding-left: 1rem;
+    color: rgba(var(--primary-color), var(--opacity-secundary));
+    cursor: pointer;
+}
+#input-phone{
+    font-size: 1rem;
+    margin-left: -1rem;
+    width: 100vw;
     height: 50px;
     font-family: 'Merriweather', serif;
     border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
@@ -423,63 +423,91 @@ footer{
 
 
 @media(max-width: 1024px) and (min-width: 701px){
-    .header-menu{
-        max-width: 1024px;
-        margin:auto;
+    main {
+        margin: 0px 20px;
+    }
+    .header-menu img {
+        width: 90px;
+        height: 90px;
+        margin-left: 0.5rem;
+    }
+    .header-menu {
+        max-width: 768px;
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1rem 0 1rem;
     }
-    .banner-name {
-        max-width: 1140px;
-        margin: auto;
-        position: relative;
-        z-index: 2;
+
+    .banner-name h1 {
+        font-size: 2rem;
+        color: #FFFF;
+        font-weight: lighter;
         padding-top: 3rem;
         padding-left: 2rem;
     }
-    .banner-hotel {
-        height: 75vh;
+    .banner-name p {
+        color: #FFF;
+        padding-left: 2rem;
     }
-    .banner-imagens img{
-        width: 150px;
-        height: 150px;
-        border-width: 3px;
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.9);
-        border-image: initial;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    .banner-hotel {
+        height: 35vh;
+    }
+
+    .form-box h1 {
+        color: rgb(var(--secundary-color), var(--opacity-secundary));
+        font-size: 1.8rem;
+        height: 80px;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .form-box #inputs {
+        font-size: 1rem;
+        width: 75vw;
+        height: 50px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding: 0 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+    #input-email {
+        font-size: 1rem;
+        margin-left: -1rem;
+        width: 1000px;
+        height: 50px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+    #input-phone {
+        font-size: 1rem;
+        margin-left: -1rem;
+        width: 820px;
+        height: 50px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
         cursor: pointer;
     }
 
-    .room {
-        width: 400px;
-        height: 320px;
-        cursor: pointer;
-        position: relative;
-        transition: transform 0.2s ease, box-shadow 0.1s ease;
-        margin: 0 15px;
+    .textarea {
+        display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        margin: 0;
     }
-    .infomation-room-text p {
-        font-size: 0.7rem;
-        height: 155px;
-        padding: 0 15px;
-        text-align: center;
-    }
-
-    .banner-restaurant-text h1 {
-        color: #FFFF;
-        font-size: 1.5rem;
-        padding: 0 2rem;
-    }
-    .banner-restaurant-text h4 {
-        color: rgba(var(--primary-color), var(--opacity-secundary));
-        font-size: 0.9rem;
+    .textarea h1 {
+        color: rgba(var(--primary-color));
     }
 }
 

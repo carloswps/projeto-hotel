@@ -117,48 +117,6 @@ nav {
 #booking-mobile{
     color: rgba(var(--primary-color));
 }
-.mobilebutton-menu{
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    background-color: rgb(var(--primary-color));
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 80%;
-    height: 3rem;
-    margin-left: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mobilebutton-menu a{
-    color: #FFFF;
-    text-decoration: none;
-    font-size: 1rem;
-    position: relative;
-    padding: 0;
-    justify-content: center;
-    z-index: 2;
-}
-.mobilebutton-menu::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(var(--secundary-color),0.5);
-    transition: left 0.2s linear;
-    z-index: 0;
-}
-.mobilebutton-menu:hover::before {
-    left: 0;
-}
-.mobilebutton-menu:hover {
-    background-color: rgb(var(--primary-color));
-}
 .close-btn {
     position: absolute;
     top: 10px;
@@ -494,36 +452,7 @@ main {
 .carousel-item.active {
     display: block;
 }
-.carousel-buttons {
-    position: absolute;
-    top: 50%; 
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Posiciona os botões nas extremidades */
-    transform: translateY(-50%); /* Ajusta para o centro exato verticalmente */
-    pointer-events: none; /* Permite interação com os botões sem afetar o contêiner */
-}
-.carousel-buttons .prev-btn,
-.carousel-buttons .next-btn {
-    background-color: rgb(var(--secundary-color));
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(var(--secundary-color), var(--secundary-color));
-    transition: background-color 0.3s ease;
-    pointer-events: all; /* Permite clicar nos botões */
-}
-.carousel-buttons .prev-btn:hover,
-.carousel-buttons .next-btn:hover {
-    background-color: rgba(var(--primary-color));
-}
+
 .carousel-comment-item h2{
     font-size: 1.5rem;
 }
@@ -982,7 +911,7 @@ footer{
         top: 0;
         right: -60vw;
         width: 60vw;
-        height: 57vh;
+        height: 56vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
@@ -1064,6 +993,7 @@ footer{
         align-items: center;
         background-color: rgba(229, 229, 229, 0.3);
     }
+
     .img-room{
         display: flex;
         align-items: center;
@@ -1226,7 +1156,7 @@ footer{
         top: 0;
         right: -60vw;
         width: 60vw;
-        height: 52vh;
+        height: 51vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
@@ -1472,7 +1402,7 @@ footer{
         top: 0;
         right: -60vw;
         width: 60vw;
-        height: 47vh;
+        height: 46vh;
         background: rgba(var(--secundary-color), 0.9);
         padding-top: 60px;
         transition: right 0.3s ease;
