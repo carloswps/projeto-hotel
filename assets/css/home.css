@@ -702,17 +702,36 @@ footer{
         align-items: center;
         justify-content: space-between;
     }
-    
-    .header-menu li{
-        list-style: none;
-        padding: 0 10px;
-        text-decoration: none;
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        width: 60vw;
+        height: 56vh;
+        background: rgba(var(--secundary-color), 0.9);
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 2;
+    }
+    .sidebar a {
         display: flex;
-        align-items: center;
+        justify-content: start;
+        color: white;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 1.4rem;
     }
-    .header-menu a{
-        font-size: 1rem;
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
     }
+    
     .banner-hotel {
         height: 48vh;
     }
@@ -935,17 +954,7 @@ footer{
         color: white;
         cursor: pointer;
     }
-    
-    .header-menu li{
-        list-style: none;
-        padding: 0 10px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-    .header-menu a{
-        font-size: 1rem;
-    }
+
     .banner-hotel {
         height: 45vh;
     }
@@ -1180,17 +1189,7 @@ footer{
         color: white;
         cursor: pointer;
     }
-    
-    .header-menu li{
-        list-style: none;
-        padding: 0 10px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-    .header-menu a{
-        font-size: 1rem;
-    }
+
     .banner-hotel {
         height: 40vh;
     }
@@ -1426,17 +1425,7 @@ footer{
         color: white;
         cursor: pointer;
     }
-    
-    .header-menu li{
-        list-style: none;
-        padding: 0 10px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-    }
-    .header-menu a{
-        font-size: 1rem;
-    }
+
     .banner-hotel {
         height: 35vh;
     }
