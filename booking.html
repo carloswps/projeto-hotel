@@ -62,8 +62,8 @@
                 <form action="booking.html" method="get">
                     <div class="date-label">
                         <h1>Datas:</h1>
-                        <input id="check-in" type="text" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Data check-in" required>
-                        <input id="check-out" type="text" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Data check-out" required>
+                        <input id="check-in" type="text" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Check-in" min="2025-01-01" max="2100-12-31" required>
+                        <input id="check-out" type="text" onfocus="this.type='date'" onblur="this.type='text'" placeholder="Check-out" min="2025-01-01" max="2100-12-31" required>
                     </div>
 
                     <div class="accommodations">
@@ -103,12 +103,12 @@
                     </div>
 
                     <div class="e-mail-label">
-                        <h1>E-mail:</h1>
+                        <h1 id="e-mail-H1">E-mail:</h1>
                         <input id="input-email" type="email" name="E-mail" placeholder="E-mail para contato" required maxlength="20">
                     </div>
 
                     <div class="phone-label">
-                        <h1>Telefone:</h1>
+                        <h1 id="phone-H1">Telefone:</h1>
                         <input id="input-phone" type="tel" name="E-mail" placeholder="Telefone para contato" required maxlength="20">
                     </div>
                     
