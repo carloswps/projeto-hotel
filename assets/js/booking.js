@@ -30,7 +30,7 @@ InputCheckin.addEventListener('focus', function (){
 InputCheckin.addEventListener('blur', function (){
   if(!this.value) {
     this.type = 'text';
-    this.placeholder = "Data check-in"
+    this.placeholder = "Check-in"
   }
 });
 
@@ -43,6 +43,6 @@ InputCheckout.addEventListener('focus', function (){
 InputCheckout.addEventListener('blur', function (){
   if(!this.value) {
     this.type = 'text';
-    this.placeholder = "Data check-out"
+    this.placeholder = "Check-out"
   }
 });
