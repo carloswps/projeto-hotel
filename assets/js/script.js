@@ -1,3 +1,4 @@
+// Menu
 function toggleMenu() {
     let sidebar = document.getElementById("sidebar");
     if (sidebar.style.right === "0px") {
@@ -19,6 +20,16 @@ function mobilemenu() {
 window.addEventListener('resize', mobilemenu);
 mobilemenu();
 
+window.addEventListener('scroll', function(){
+  let menuResize = document.getElementById("sidebar");
+  if(window.scrollY > 50){
+    menuResize.style.opacity = '0';
+  } else{
+    menuResize.style.opacity = '1'
+  }
+});
+
+// Rooms redi
 function redirecionar(){
   const select = document.getElementById('rooms-options');
   const pagina = select.value;

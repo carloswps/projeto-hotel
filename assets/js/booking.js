@@ -20,6 +20,15 @@ function mobilemenu() {
 window.addEventListener('resize', mobilemenu);
 mobilemenu();
 
+window.addEventListener('scroll', function(){
+  let menuResize = document.getElementById("sidebar");
+  if(window.scrollY > 50){
+    menuResize.style.opacity = '0';
+  } else{
+    menuResize.style.opacity = '1'
+  }
+});
+
 // Inputs
 let inputCheckin = document.querySelector('#check-in');
 inputCheckin.addEventListener('focus', function (){
