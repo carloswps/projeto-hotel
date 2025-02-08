@@ -689,22 +689,24 @@ footer{
     .form-box h1 {
         color: rgb(var(--secundary-color), var(--opacity-secundary));
         font-size: 1.6rem;
-        height: 65px;
+        height: auto;
         width: 300px;
         display: flex;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
+        margin-top: 10px;
     }
-    .form-box #inputs {
-        font-size: 1rem;
-        width: 75vw;
-        height: 50px;
-        font-family: 'Merriweather', serif;
-        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
-        border-radius: 10px;
-        padding: 0 1rem;
-        color: rgba(var(--primary-color), var(--opacity-secundary));
-        cursor: pointer;
+    
+    .date-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .date-label h1{
+        margin-top: 0;
     }
     .date-label input[type='text'] {
         font-size: 15px;
@@ -716,6 +718,7 @@ footer{
         padding: 0 1rem;
         color: rgba(var(--primary-color), var(--opacity-secundary));
         cursor: pointer;
+        margin-top: 10px;
     }
     .date-label input:focus {
         outline: none;
@@ -723,6 +726,7 @@ footer{
         box-shadow: 0 0 2px rgba(var(--primary-color), var(--opacity-secundary));
         width: 100%;
         height: 40px;
+        margin-top: 10px;
     }
     .e-mail-label,.phone-label{
         display: flex;
@@ -753,6 +757,100 @@ footer{
         cursor: pointer;
     }
 
+    .accommodations {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .accommodations #accommodations-rooms {
+        font-size: 15px;
+        margin-left: 10px;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    .companions-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .companions-label #companions-options {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .names-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+        flex-direction: column;
+    }
+    .names-label h1{
+        margin-top: 0;
+    }
+    #inputs-names {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .e-mail-label, .phone-label {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        flex-direction: column;
+    }
+    #input-email {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+    #input-phone {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+
     .textarea {
         display: flex;
         justify-content: center;
@@ -763,10 +861,277 @@ footer{
     .textarea h1 {
         color: rgba(var(--primary-color));
     }
+    .textarea p {
+        font-size: 0.6rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+    }
 }
 
 @media(max-width: 436px) and (min-width: 400px){
-   
+    main {
+        margin: 0px 20px;
+    }
+    .header-menu{
+        display: none;
+    }
+    .mobile-menu{
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        width: 60vw;
+        height: 47vh;
+        background: rgba(var(--secundary-color), 0.9);
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 2;
+    }
+    .sidebar a {
+        display: flex;
+        justify-content: start;
+        color: white;
+        padding: 5px;
+        text-decoration: none;
+        font-size: 1.3rem;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 25px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .header-menu li{
+        list-style: none;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+    .header-menu a{
+        font-size: 1rem;
+    }
+    
+    .banner-name h1 {
+        font-size: 1.9rem;
+        color: #FFFF;
+        font-weight: lighter;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+    .banner-name p {
+        color: #FFF;
+        padding-left: 1rem;
+    }
+    .banner-hotel {
+        height: 35vh;
+    }
+
+    .Title-booking h1 {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-box h1 {
+        color: rgb(var(--secundary-color), var(--opacity-secundary));
+        font-size: 1.6rem;
+        height: auto;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .date-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .date-label h1{
+        margin-top: 0;
+    }
+    .date-label input[type='text'] {
+        font-size: 15px;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding: 0 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .date-label input:focus {
+        outline: none;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        box-shadow: 0 0 2px rgba(var(--primary-color), var(--opacity-secundary));
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .e-mail-label,.phone-label{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+    }
+    #input-email{
+        font-size: 1rem;
+        width: 100%;
+        height: 50px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius:10px; 
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+    #input-phone {
+        font-size: 1rem;
+        width: 820px;
+        height: 50px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+
+    .accommodations {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .accommodations #accommodations-rooms {
+        font-size: 15px;
+        margin-left: 10px;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    .companions-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .companions-label #companions-options {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .names-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 0;
+        flex-direction: column;
+    }
+    .names-label h1{
+        margin-top: 0;
+    }
+    #inputs-names {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .e-mail-label, .phone-label {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        flex-direction: column;
+    }
+    #input-email {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+    #input-phone {
+        font-size: 1rem;
+        width: 100%;
+        height: 40px;
+        font-family: 'Merriweather', serif;
+        border: 2px solid rgba(var(--secundary-color), var(--opacity-primary));
+        border-radius: 10px;
+        padding-left: 1rem;
+        color: rgba(var(--primary-color), var(--opacity-secundary));
+        cursor: pointer;
+    }
+
+    .textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .textarea h1 {
+        color: rgba(var(--primary-color));
+    }
+    .textarea p {
+        font-size: 0.6rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        color: rgba(var(--secundary-color), var(--opacity-primary));
+    }
 }
 
 

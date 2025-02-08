@@ -21,28 +21,47 @@ window.addEventListener('resize', mobilemenu);
 mobilemenu();
 
 // Inputs
-let InputCheckin = document.querySelector('#check-in');
-InputCheckin.addEventListener('focus', function (){
+let inputCheckin = document.querySelector('#check-in');
+inputCheckin.addEventListener('focus', function (){
   if(this.type !== 'date'){
     this.type = 'date'
   }
 });
-InputCheckin.addEventListener('blur', function (){
+inputCheckin.addEventListener('blur', function (){
   if(!this.value) {
     this.type = 'text';
     this.placeholder = "Check-in"
   }
 });
 
-let InputCheckout = document.querySelector('#check-out');
-InputCheckout.addEventListener('focus', function (){
+let inputCheckout = document.querySelector('#check-out');
+inputCheckout.addEventListener('focus', function (){
   if(this.type !== 'date'){
     this.type = 'date'
   }
 });
-InputCheckout.addEventListener('blur', function (){
+inputCheckout.addEventListener('blur', function (){
   if(!this.value) {
     this.type = 'text';
     this.placeholder = "Check-out"
   }
 });
+
+let inputTel = document.querySelector('#input-phone');
+
+inputTel.addEventListener("keypress", function(event){
+  if(!/[0-9() -]/.test(event.key)){
+    event.preventDefault(
+      alert("Formato inválido!")
+    );
+  }
+} )
+
+inputTel.addEventListener("input", function (){
+  const regex = /^\(\d{2}\) \d{5}-\d{4}$/;
+  if(!regex.test(inputTel.value)){
+    inputTel.setCustomValidity("Formato inválido! Use (99) 99999-9999");
+  } else {
+    inputTel.setCustomValidity("");
+  }
+})
