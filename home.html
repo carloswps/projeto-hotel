@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <title>Home</title>
 </head>
 
@@ -30,17 +36,17 @@
         <img class="logo" src="assets/media/Logo hotel (1).png" alt="" loading="lazy">
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <nav class="sidebar" id="sidebar">
-        <button class="close-btn" onclick="toggleMenu()">×</button>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Rooms</a></li>
-            <li><a href="">Restaurant</a></li>
-            <li><a href="">Contacts</a></li>
-            <li><a href="" id="booking-mobile">Booking</a></li>
-        </ul>
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Rooms</a></li>
+                <li><a href="">Restaurant</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="" id="booking-mobile">Booking</a></li>
+            </ul>
         </nav>
     </div>
-    
+
 
     <section class="banner-hotel">
         <div class="banner-name">
@@ -78,7 +84,7 @@
                     </div>
                     <div class="room-bar"></div>
                 </div>
-                
+
                 <div class="room">
                     <div class="img-room">
                         <img src="assets/img/single room imagem 1.webp" alt="" loading="lazy">
@@ -87,7 +93,7 @@
                         <h1>Single rooms</h1>
                         <p>
                             Quartos compactos e confortáveis, projetados para uma pessoa,
-                             com cama de solteiro, banheiro privativo...
+                            com cama de solteiro, banheiro privativo...
                         </p>
                     </div>
                     <div class="room-bar"></div>
@@ -100,14 +106,14 @@
                     <div class="infomation-room-text">
                         <h1>Family rooms</h1>
                         <p>
-                            Acomodações espaçosas projetadas para famílias, com várias camas, banheiro privativo e 
+                            Acomodações espaçosas projetadas para famílias, com várias camas, banheiro privativo e
                             comodidades como Wi-Fi, TV e ar-condicionado...
                         </p>
                     </div>
                     <div class="room-bar"></div>
                 </div>
             </div>
-            
+
             <div class="roombutton-mobile">
                 <select name="" id="rooms-options" onchange="redirecionar()">
                     <option value="" disabled selected>Saiba Mais</option>
@@ -116,14 +122,16 @@
                     <option value="family-room"><a href="">family room</a></option>
                 </select>
             </div>
-            
+
             <div class="infomation-services">
                 <div class="infomation-services-text">
                     <h1>5 Star Hotel Rooms</h1>
                     <h5>Conforto e Sofisticação em Cada Detalhe</h5>
-                    <p>Vivencie o máximo em luxo e sofisticação em nossas acomodações 5 estrelas. Cada detalhe foi pensado com cuidado, 
-                        desde os móveis elegantes e camas de extremo conforto até as comodidades de última geração. Encante-se com vistas deslumbrantes, 
-                        espaços amplos e serviços personalizados que elevam sua experiência a um novo patamar. 
+                    <p>Vivencie o máximo em luxo e sofisticação em nossas acomodações 5 estrelas. Cada detalhe foi
+                        pensado com cuidado,
+                        desde os móveis elegantes e camas de extremo conforto até as comodidades de última geração.
+                        Encante-se com vistas deslumbrantes,
+                        espaços amplos e serviços personalizados que elevam sua experiência a um novo patamar.
                         Perfeito para quem busca exclusividade, conforto absoluto e hospitalidade sem igual.</p>
                 </div>
                 <div class="infomation-services-icons">
@@ -135,7 +143,7 @@
                             <h4>Wi-fi</h4>
                             <p>Acesso rápido e gratuito ao Wi-Fi</p>
                         </div>
-                    </div>   
+                    </div>
                     <div class="services-icons">
                         <div class="service-icon">
                             <figure>
@@ -144,7 +152,7 @@
                             <h4>Room Service</h4>
                             <p>Serviço de quarto disponível 24h</p>
                         </div>
-                    </div>   
+                    </div>
                     <div class="services-icons">
                         <div class="service-icon">
                             <figure>
@@ -153,7 +161,7 @@
                             <h4>Parking</h4>
                             <p>Estacionamento seguro e gratuito</p>
                         </div>
-                    </div>   
+                    </div>
                     <div class="services-icons">
                         <div class="service-icon">
                             <figure>
@@ -162,7 +170,7 @@
                             <h4>Recption</h4>
                             <p>Recepção aberta 24 horas</p>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>
@@ -183,10 +191,31 @@
         <div class="carousel">
             <div class="carousel-comment-item active">
                 <img src="assets/img/Jhon .png" alt="" loading="lazy">
-                <h2>Jhon</h2>
+                <h2>Vitor</h2>
                 <h6>Depoimento</h6>
-                <p>"Minha estadia neste hotel foi simplesmente incrível! Desde o momento em que chegamos, o atendimento foi impecável e a equipe fez de tudo para nos sentir em casa. O quarto 5 estrelas superou todas as expectativas, 
-                    com uma vista maravilhosa, cama superconfortável e todos os detalhes de luxo que tornam a experiência única. Sem dúvida, um lugar perfeito para relaxar e aproveitar cada momento. Recomendo de olhos fechados!"</p>
+                <p>"Minha estadia neste hotel foi simplesmente incrível! Desde o momento em que chegamos, o atendimento
+                    foi impecável e a equipe fez de tudo para nos sentir em casa. O quarto 5 estrelas superou todas as
+                    expectativas,
+                    com uma vista maravilhosa, cama superconfortável e todos os detalhes de luxo que tornam a
+                    experiência única. Sem dúvida, um lugar perfeito para relaxar e aproveitar cada momento. Recomendo
+                    de olhos fechados!"</p>
+            </div>
+
+            <div class="carousel-comment-item">
+                <img src="assets/img/vitor img.jpg" alt="" loading="lazy">
+                <h2>Bruno</h2>
+                <h6>Depoimento</h6>
+                <p>"Ficar neste hotel foi uma experiência maravilhosa! Desde a chegada, fomos muito bem recebidos pela equipe, que fez de tudo para que nos sentíssemos à vontade. 
+                    O quarto era impecável, com uma vista incrível, cama extremamente confortável e detalhes que deixaram tudo ainda mais especial. 
+                    Sem dúvida, é o lugar ideal para descansar e curtir cada momento. Recomendo totalmente!"</p>
+            </div>
+
+            <div class="carousel-comment-item">
+                <img src="assets/img/vinicius img.jpg" alt="" loading="lazy">
+                <h2>Vinicius</h2>
+                <h6>Depoimento</h6>
+                <p>"Hospedagem impecável! Desde o check-in, fomos recebidos com muita atenção e simpatia. O quarto era confortável, bem decorado e com uma vista deslumbrante. 
+                    Cada detalhe foi pensado para proporcionar uma estadia relaxante e agradável. Com certeza, um hotel que vale a pena visitar novamente!"</p>
             </div>
         </div>
     </section>
@@ -196,12 +225,18 @@
             <div class="contacts-text">
                 <h1>Contatos</h1>
                 <ul>
-                    <li><p>Telefone:<span>999 8888 7777</span></p></li>
-                    <li><p>E-mail:<span>www.aaaaa.aaa@gmail.com</span></li>
+                    <li>
+                        <p>Telefone:<span>999 8888 7777</span></p>
+                    </li>
+                    <li>
+                        <p>E-mail:<span>www.aaaaa.aaa@gmail.com</span>
+                    </li>
                 </ul>
                 <h1>Endereço</h1>
                 <ul>
-                    <li><p>Avenida...</p></li>
+                    <li>
+                        <p>Avenida...</p>
+                    </li>
                 </ul>
             </div>
             <div class="icons-socialmidia">
@@ -211,9 +246,7 @@
             </div>
         </div>
         <div class="map">
-            <div class="area-map">
-                <img src="assets/img/demostrativo mapa.jpg" alt="" loading="lazy">
-            </div>
+            <div id="map"></div>
         </div>
     </section>
     <footer>
@@ -222,6 +255,7 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/api.js"></script>
 </body>
 
 </html>
